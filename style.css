@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  /* display: grid; allows the items in the container to be set up in a grid. */
+  display: grid;
+
+  /* in the grid-template-columns: you can set sizes by using px, %, or fr. fr stands for fraction, a fraction would be fraction by the size of the max-width container. The amount of columns you will get is determined by the amount of numbers you put in the grid. So if you have 2 numbers. You will have 2 columns. */
+  /* grid-template-columns: 100px 300px; */
+  /* grid-template-columns: 40% 60%; */
+/* Or we can use fractions. Fractions are what's most common. 1fr and 1fr are fractional units with the exact same unit.  */
+  /* grid-template-columns: 1fr 2fr; */
+  /* If we change the numbers to maybe 2fr, then that would mean that that particular column would be larger than the other column that's set to 1fr.  */
+  /* grid-template-columns: 1fr 2fr; */
+  /* And if we want to add another column, simply add another number. */
+  grid-template-columns: 1fr 2fr 3fr;
+
+
+
+
+  /* gap: 10px; */
+}
+
+.item {
+  background: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
